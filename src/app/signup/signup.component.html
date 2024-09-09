@@ -1,0 +1,28 @@
+<p>signup works!</p>
+
+<form [formGroup]="loginform_reactive" (ngSubmit)="loginuser_reactive()">
+
+
+
+    <input type="text" placeholder="your name" name="name" formControlName="name">
+    <br><br>
+    <span *ngIf="user && user.invalid" style="color: rebeccapurple;">Invalid user name (only alphabets a-zA-Z)</span>
+
+
+    <input type="text" placeholder="type a unique username" name="username" formControlName="username">
+    <br><br>
+    <span *ngIf="user_name && user_name.invalid" style="color: rebeccapurple;">username is not valid</span>
+
+
+    <input type="text" placeholder="type a unique email" name="email" formControlName="email">
+    <br>
+    <br>
+    <span *ngIf="email && email.invalid" style="color: rebeccapurple;">email is not valid</span>
+    <br>
+    <br>
+    <input type="password" placeholder="password" name="password" formControlName="password">
+    <br><br>
+    <span *ngIf="pass_key && pass_key.invalid" style="color: rebeccapurple;">password is not valid</span>
+    <br><br>
+    <button [disabled]="loginform_reactive.invalid">Login</button>
+</form>

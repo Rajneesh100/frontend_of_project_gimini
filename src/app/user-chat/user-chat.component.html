@@ -1,0 +1,32 @@
+<div class="container">
+    <!-- Left side: List of Users -->
+    <div class="user-list">
+        <h3>Friends</h3>
+        <div *ngFor="let item of FriendList">
+            <button class="user-button" (click)="GetChat(item.id)"> {{ item.name }} </button>
+        </div>
+    </div>
+
+    <!-- Right side: Chat Window -->
+    <div class="chat-window">
+        <div *ngIf="selectedUser; else noChat">
+            <h3>Chat with {{ selectedUser.name }}</h3>
+            <div class="chat-messages">
+                <div *ngFor="let message of chatMessages" class="message-container"
+                    [ngClass]="{'right': message.sender_id === UserId, 'left': message.sender_id !== UserId}">
+                    <div class="message">
+                        <p><strong>{{ message.sender }}</strong>: {{ message.text }}</p>
+                        <p class="timestamp">{{ message.timestamp | date: 'shortTime' }}</p>
+                    </div>
+                </div>
+            </div>
+            <input class="input" #inbox type="text" placeholder="Enter your message" name="query">
+            <button class="send" (click)="sendMessage(inbox.value); inbox.value='';">Send</button>
+        </div>
+
+        <!-- Display this if no user is selected -->
+        <ng-template #noChat>
+            <p>Select a friend to start chatting.</p>
+        </ng-template>
+    </div>
+</div>

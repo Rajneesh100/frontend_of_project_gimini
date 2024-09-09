@@ -1,0 +1,50 @@
+/* Center the profile information */
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the profile details */
+.profile-detail {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Strong text for labels */
+.profile-detail strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styling for the profile ID */
+.profile-detail-id {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #666;
+    background-color: #eee;
+}
+
+/* Style for the loading message */
+.loading-message {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: #888;
+}

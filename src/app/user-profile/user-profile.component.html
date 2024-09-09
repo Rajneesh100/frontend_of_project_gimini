@@ -1,0 +1,23 @@
+<br> <br>
+
+
+<h3>This is Profile Tab</h3>
+<a routerLink="../chat"> Chat </a>
+<br><br>
+<a routerLink="../profile"> Profile </a>
+
+
+
+<div class="profile-container" *ngIf="profileData">
+    <h2>Profile Information</h2>
+    <div class="profile-detail"><strong>Name:</strong> {{ profileData.name }}</div>
+    <div class="profile-detail"><strong>Username:</strong> {{ profileData.username }}</div>
+    <div class="profile-detail"><strong>Email:</strong> {{ profileData.email }}</div>
+    <div class="profile-detail"><strong>Account Created At:</strong> {{ profileData.created_at | date:'medium' }}</div>
+    <div class="profile-detail"><strong>Last Updated:</strong> {{ profileData.updated_at | date:'medium' }}</div>
+    <div class="profile-detail profile-detail-id"><strong>Profile ID:</strong> {{ profileData._id }}</div>
+</div>
+
+<div class="loading-message" *ngIf="!profileData">
+    <p>Loading profile data...</p>
+</div>

@@ -1,0 +1,101 @@
+.background-container {
+    height: 100vh;
+    /* Full height of the viewport */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Background for logged-out users */
+.background-container.logged-out {
+    background-image: url('https://www.nullplex.com.nullplex.co.in/uploads/blogs/coverimages/8bf83182-9096-437b-b1ae-0973852f02fb-20240507050245.png');
+}
+
+/* Background for logged-in users */
+.background-container.logged-in {
+    background-image: url('https://global.discourse-cdn.com/monzo/original/1X/8667430c4a29b94db9c13118002ab6ca2f2b5017.jpg');
+}
+
+/* Style for the navigation bar */
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+/* Style for the Home button on the left */
+.navbar-left a {
+    /* top: 0px; */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* Style for the image on the left side */
+.navbar-image img {
+    width: 80px;
+    /* Adjust the width to a smaller size */
+    height: auto;
+    margin-left: 20px;
+    /* Add space between the image and the home button */
+}
+
+/* Style for login/signup or logout button on the right */
+.navbar-right {
+    display: flex;
+    gap: 30px;
+    /* Add some space between the buttons */
+}
+
+.navbar-right a,
+.navbar-right button {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-right button:hover,
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-left,
+    .navbar-right {
+        margin-bottom: 10px;
+    }
+
+    .navbar-image img {
+        width: 60px;
+        /* Smaller image size on mobile */
+    }
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
